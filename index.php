@@ -4,6 +4,7 @@
         <title>File Saver</title>
     </head>
     <body>
+        <h1>File Saver</h1>
         <?php
             $content = file_get_contents('php://input');
             $success = false;
@@ -17,9 +18,9 @@
 
             if ($success) {
                 echo "write success\n";
-                echo "<code>"
+                echo "<code>";
                 echo $content;
-                echo "</code>"
+                echo "</code>";
                 echo "\n";
             } else {
                 echo "failed";
