@@ -10,7 +10,7 @@
             $success = false;
 
             if ($content) {
-                mkdir("./out", 777, true);
+                mkdir("./out", 0777, true);
                 $bytes_written = file_put_contents(__DIR__ . "/out/data.txt", $content);
 
                 $success = $bytes_written > 0;
@@ -18,10 +18,9 @@
 
             if ($success) {
                 echo "write success\n";
-                echo "<code>";
+                echo "<code>\n";
                 echo $content;
-                echo "</code>";
-                echo "\n";
+                echo "\n</code>\n";
             } else {
                 echo "failed";
             }
